@@ -13,5 +13,8 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello Earth!" />
+        android:text="Hello Big World!"
+        android:textSize="36sp"
+        android:textStyle="normal|bold"
+        android:textColor="@android:color/holo_green_dark" />
 </RelativeLayout>
