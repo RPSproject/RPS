@@ -19,7 +19,7 @@
         android:textColor="@android:color/holo_green_dark" />
 
     <TextView
-        android:text="This Actually Works"
+        android:text="I hope this works"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/textView2"
