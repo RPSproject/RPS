@@ -20,7 +20,6 @@
 
     <TextView
         android:text="I hope this works"
-        android:text="Derek was here; I hope so too! Will confirm when commited to git VCS"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/textView2"
@@ -33,7 +32,7 @@
     <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Derek was here; I hope so too! Will confirm when commited to git VCS&quot;"
+            android:text="Derek was here; I hope so too! Will confirm when commited to git VCS"
             android:id="@+id/dwTextView"
             android:layout_centerVertical="true" android:layout_alignParentLeft="true"/>
 </RelativeLayout>
