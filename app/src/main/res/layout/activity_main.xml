@@ -11,15 +11,16 @@
     tools:context="com.domain.some.rps.MainActivity">
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello Big World!"
-        android:textSize="36sp"
-        android:textStyle="normal|bold"
-        android:textColor="@android:color/holo_green_dark" />
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hello Big World!"
+            android:textSize="36sp"
+            android:textStyle="normal|bold"
+            android:textColor="@android:color/holo_green_dark" android:id="@+id/textView3"/>
 
     <TextView
         android:text="I hope this works"
+        android:text="Derek was here; I hope so too! Will confirm when commited to git VCS"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/textView2"
@@ -29,4 +30,10 @@
         android:textColor="@color/colorAccent"
         android:layout_below="@+id/textView"
         android:layout_alignParentStart="true" />
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Derek was here; I hope so too! Will confirm when commited to git VCS&quot;"
+            android:id="@+id/dwTextView"
+            android:layout_centerVertical="true" android:layout_alignParentLeft="true"/>
 </RelativeLayout>
