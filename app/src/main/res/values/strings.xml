@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">RPS</string>
+    <string name="txtGreeting">Welcome</string>
+    <string name="txtBottomGreet">to RPS</string>
+    <string name="txtEnterName">Enter your Name Above</string>
+    <string name="chkMusic">Play Music</string>
+    <string name="btnStart">Start</string>
 </resources>
