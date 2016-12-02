@@ -5,4 +5,6 @@
     <string name="txtEnterName">Enter your Name Above</string>
     <string name="chkMusic">Play Music</string>
     <string name="btnStart">Start</string>
+    <string name="txtName">Enter Your Name</string>
+    <string name="txtDestiny">Choose Your DESTINY</string>
 </resources>

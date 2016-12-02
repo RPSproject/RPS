@@ -4,28 +4,32 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Toast;
 
 
 public class EnterInfo extends AppCompatActivity {
 
     Button button1;
+    EditText userName;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_enter_info);
 
+        userName = (EditText)findViewById(R.id.txtName);
+
         button1 = (Button) findViewById(R.id.btnStart);
-        button1.setOnClickListener(bukulele);
+        button1.setOnClickListener(bstart);
 
     }
 
-    Button.OnClickListener bukulele = new Button.OnClickListener() {
+    Button.OnClickListener bstart = new Button.OnClickListener() {
         @Override
         public void onClick(View v) {
-            AndroidTutorialApp.somevalue = "ok we edited";
-            button1.setText(AndroidTutorialApp.somevalue);
+            AndroidTutorialApp.userName = userName.getText().toString();
+            button1.setText(AndroidTutorialApp.userName);
         }
     };
 }

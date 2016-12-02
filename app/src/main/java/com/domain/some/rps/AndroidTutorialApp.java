@@ -10,7 +10,8 @@ import android.app.Application;
 public class AndroidTutorialApp extends Application {
 
     //add this variable declaration:
-    public static String somevalue = "Hello from application singleton!";
+    public static String userName = "";
+    public static int theirChoice;
 
     private static AndroidTutorialApp singleton;
 

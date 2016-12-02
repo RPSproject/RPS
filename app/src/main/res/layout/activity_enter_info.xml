@@ -15,12 +15,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
-        android:text="Name"
+        android:text="@string/txtName"
         android:ems="10"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="12dp"
-        android:id="@+id/editText"
+        android:id="@+id/txtName"
         android:textSize="24sp"
         android:fontFamily="sans-serif" />
 
@@ -39,7 +39,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/txtEnterName"
-        android:layout_below="@+id/editText"
+        android:layout_below="@+id/txtName"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="26dp" />
 
