@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_choice_of_destiny"
     android:layout_width="match_parent"
@@ -11,80 +12,77 @@
     tools:context="com.domain.some.rps.ChoiceOfDestiny"
     android:background="@color/colorAccent">
 
-    <Button
-        android:text="rock"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
-        android:id="@+id/btnRock"
-        android:background="@drawable/rock3"
-        android:layout_below="@+id/txtDestiny"
-        android:layout_alignStart="@+id/txtDestiny" />
 
-    <Button
-        android:text="paper"
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/btnPaper"
-        android:background="@drawable/paper3"
-        android:layout_alignBaseline="@+id/btnRock"
-        android:layout_alignBottom="@+id/btnRock"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp">
 
-    <Button
-        android:text="Scissors"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/btnScissors"
-        android:background="@drawable/scissors3"
-        android:layout_alignBaseline="@+id/btnPaper"
-        android:layout_alignBottom="@+id/btnPaper"
-        android:layout_alignEnd="@+id/txtDestiny" />
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/rock3"
+            android:id="@+id/btnRock"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/btnRock" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/txtDestiny"
-        android:text="@string/txtDestiny"
-        android:textSize="30sp"
-        android:textStyle="normal|bold"
-        android:textColor="@android:color/black"
-        android:layout_marginTop="65dp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/paper3"
+            android:id="@+id/btnPaper"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/btnPaper" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/scissors3"
+            android:id="@+id/btnScissors"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/btnScissors" />
+
+
+    </LinearLayout>
 
     <TextView
-        android:text="TextView"
+        android:text="@string/txtWelcome"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="27dp"
-        android:id="@+id/txtWelcome"
-        android:textSize="24sp"
-        android:textAllCaps="false"
-        android:textStyle="normal|italic"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:textAlignment="center" />
+        android:id="@+id/txtWelcome"
+        android:textSize="24sp"
+        android:textStyle="normal|italic" />
 
     <TextView
-        android:text="Win Rate:"
+        android:text="@string/txtDestiny"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="25dp"
-        android:id="@+id/txtWinRate"
-        android:textSize="18sp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignEnd="@+id/btnScissors"
-        android:layout_marginEnd="44dp" />
+        android:layout_below="@+id/txtWelcome"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="11dp"
+        android:id="@+id/txtDestiny"
+        android:textStyle="normal|bold"
+        android:textSize="30sp" />
 
     <TextView
         android:text="@string/txtDirections"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="34dp"
-        android:id="@+id/txtDirections"
-        android:textAlignment="center"
-        android:textSize="18sp"
-        android:layout_below="@+id/btnRock"
-        android:layout_alignStart="@+id/btnRock" />
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="230dp"
+        android:id="@+id/txtDirections" />
+
+    <TextView
+        android:text="@string/txtWinRate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="25dp"
+        android:id="@+id/txtWinRate"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:textAlignment="center" />
+
 </RelativeLayout>
