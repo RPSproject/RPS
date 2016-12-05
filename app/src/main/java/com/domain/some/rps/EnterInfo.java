@@ -1,5 +1,6 @@
 package com.domain.some.rps;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -29,7 +30,7 @@ public class EnterInfo extends AppCompatActivity {
         @Override
         public void onClick(View v) {
             AndroidTutorialApp.userName = userName.getText().toString();
-            button1.setText(AndroidTutorialApp.userName);
+            startActivity(new Intent(EnterInfo.this, ChoiceOfDestiny.class));
         }
     };
 }

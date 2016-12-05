@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_enter_info"
     android:layout_width="match_parent"
@@ -15,24 +16,15 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
-        android:text="@string/txtName"
         android:ems="10"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="12dp"
         android:id="@+id/txtName"
         android:textSize="24sp"
-        android:fontFamily="sans-serif" />
-
-    <CheckBox
-        android:text="@string/chkMusic"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="41dp"
-        android:id="@+id/checkBox"
-        android:textSize="24sp"
-        android:layout_below="@+id/txtEnterName"
-        android:layout_alignStart="@+id/txtEnterName" />
+        android:fontFamily="sans-serif"
+        android:hint="@string/txtName"
+        android:textColor="?attr/colorPrimary" />
 
     <TextView
         android:text="@string/txtEnterName"
@@ -40,17 +32,35 @@
         android:layout_height="wrap_content"
         android:id="@+id/txtEnterName"
         android:layout_below="@+id/txtName"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="26dp" />
+        android:layout_centerHorizontal="true" />
+
+    <CheckBox
+        android:text="@string/chkMusic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="22dp"
+        android:id="@+id/checkBox"
+        android:textSize="24sp"
+        android:layout_below="@+id/txtEnterName"
+        android:layout_alignStart="@+id/txtEnterName"
+        android:textColor="@color/colorPrimary" />
 
     <Button
         android:text="@string/btnStart"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="91dp"
+        android:layout_marginBottom="63dp"
         android:id="@+id/btnStart"
         android:textSize="36sp"
         android:layout_alignParentBottom="true"
-        android:layout_alignStart="@+id/checkBox"
-        android:layout_alignEnd="@+id/checkBox" />
+        android:layout_alignEnd="@+id/txtEnterName"
+        android:textColor="@color/colorPrimary" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/rps_graphic"
+        android:id="@+id/imageView"
+        android:layout_centerVertical="true"
+        android:layout_alignParentStart="true" />
 </RelativeLayout>

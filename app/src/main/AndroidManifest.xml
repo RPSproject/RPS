@@ -16,7 +16,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".EnterInfo" />
-        <activity android:name=".ChoiceOfDestiny"></activity>
+        <activity android:name=".ChoiceOfDestiny" />
+        <activity android:name=".ResultsPage"></activity>
     </application>
 
 </manifest>

@@ -11,53 +11,80 @@
     tools:context="com.domain.some.rps.ChoiceOfDestiny"
     android:background="@color/colorAccent">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="19dp"
-        android:id="@+id/txtDestiny"
-        android:text="@string/txtDestiny"
-        android:textSize="30sp"
-        android:textStyle="normal|bold"
-        android:textColor="@android:color/black" />
-
     <Button
         android:text="rock"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:id="@+id/btnRock"
+        android:background="@drawable/rock3"
         android:layout_below="@+id/txtDestiny"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="32dp"
-        android:id="@+id/btnRock" />
+        android:layout_alignStart="@+id/txtDestiny" />
 
     <Button
         android:text="paper"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/btnPaper"
-        android:layout_below="@+id/btnRock"
-        android:layout_alignStart="@+id/btnRock"
-        android:layout_marginTop="74dp" />
+        android:background="@drawable/paper3"
+        android:layout_alignBaseline="@+id/btnRock"
+        android:layout_alignBottom="@+id/btnRock"
+        android:layout_centerHorizontal="true" />
 
     <Button
         android:text="Scissors"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/btnPaper"
-        android:layout_alignEnd="@+id/btnPaper"
-        android:layout_marginTop="69dp"
-        android:id="@+id/btnScissors" />
+        android:id="@+id/btnScissors"
+        android:background="@drawable/scissors3"
+        android:layout_alignBaseline="@+id/btnPaper"
+        android:layout_alignBottom="@+id/btnPaper"
+        android:layout_alignEnd="@+id/txtDestiny" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtDestiny"
+        android:text="@string/txtDestiny"
+        android:textSize="30sp"
+        android:textStyle="normal|bold"
+        android:textColor="@android:color/black"
+        android:layout_marginTop="65dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:text="TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="27dp"
+        android:id="@+id/txtWelcome"
+        android:textSize="24sp"
+        android:textAllCaps="false"
+        android:textStyle="normal|italic"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:textAlignment="center" />
 
     <TextView
         android:text="Win Rate:"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_toEndOf="@+id/btnScissors"
-        android:layout_marginStart="13dp"
-        android:layout_marginBottom="52dp"
+        android:layout_marginBottom="25dp"
         android:id="@+id/txtWinRate"
-        android:textSize="18sp" />
+        android:textSize="18sp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignEnd="@+id/btnScissors"
+        android:layout_marginEnd="44dp" />
+
+    <TextView
+        android:text="@string/txtDirections"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="34dp"
+        android:id="@+id/txtDirections"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        android:layout_below="@+id/btnRock"
+        android:layout_alignStart="@+id/btnRock" />
 </RelativeLayout>
