@@ -12,58 +12,62 @@
     tools:context="com.domain.some.rps.EnterInfo"
     android:background="@color/colorAccent">
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:ems="10"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="12dp"
-        android:id="@+id/txtName"
-        android:textSize="24sp"
-        android:fontFamily="sans-serif"
-        android:hint="@string/txtName"
-        android:textColor="?attr/colorPrimary" />
-
     <TextView
         android:text="@string/txtEnterName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/txtEnterName"
         android:layout_below="@+id/txtName"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp" />
 
-    <CheckBox
-        android:text="@string/chkMusic"
+    <TextView
+        android:text="Welcome to RPS"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="22dp"
-        android:id="@+id/checkBox"
-        android:textSize="24sp"
-        android:layout_below="@+id/txtEnterName"
-        android:layout_alignStart="@+id/txtEnterName"
-        android:textColor="@color/colorPrimary" />
-
-    <Button
-        android:text="@string/btnStart"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="63dp"
-        android:id="@+id/btnStart"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:id="@+id/txtTitle"
         android:textSize="36sp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignEnd="@+id/txtEnterName"
-        android:textColor="@color/colorPrimary" />
+        android:textStyle="normal|bold"
+        android:textColor="@color/colorPrimaryDark" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/txtName"
+        android:textSize="24sp"
+        android:fontFamily="sans-serif"
+        android:hint="@string/txtName"
+        android:textColor="?attr/colorPrimary"
+        android:layout_below="@+id/txtTitle"
+        android:layout_alignStart="@+id/txtTitle"
+        android:layout_marginTop="25dp"
+        android:background="#bee8e2"
+        android:textAlignment="center" />
 
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:srcCompat="@drawable/rps_stock_photo"
         android:id="@+id/imgStockPhoto"
-        android:layout_centerVertical="true"
-        android:layout_alignParentStart="true"
         android:adjustViewBounds="true"
         android:padding="50sp"
-        android:contentDescription="@string/imgStockPhoto" />
+        android:contentDescription="@string/imgStockPhoto"
+        android:layout_below="@+id/txtName"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:text="@string/btnStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnStart"
+        android:textSize="36sp"
+        android:textColor="@color/colorPrimary"
+        android:layout_alignParentBottom="true"
+        android:layout_alignEnd="@+id/txtEnterName"
+        android:layout_marginBottom="12dp" />
 </RelativeLayout>
