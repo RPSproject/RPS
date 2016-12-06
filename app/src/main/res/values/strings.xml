@@ -8,4 +8,18 @@
     <string name="txtName">Enter Your Name</string>
     <string name="txtDestiny">Choose Your DESTINY</string>
     <string name="txtDirections">Make a choice from the options above</string>
+    <string name="btnPlayAgain">Play Again</string>
+    <string name="imgUserChoice">user choice image</string>
+    <string name="imgCpuChoice">cpu choice image</string>
+    <string name="btnRock">Choose Rock</string>
+    <string name="btnPaper">Choose Paper</string>
+    <string name="btnScissors">Choose Scissors</string>
+    <string name="imgStockPhoto">RPS Stock Photo</string>
+
+    <string name="txtUserChoice">User\'s Choice</string>
+    <string name="txtCPUChoice">CPU\'s Choice</string>
+    <string name="txtRuling">qq and CPU both chose paper</string>
+    <string name="txtRulingOutcome">CPU Wins!</string>
+    <string name="txtWelcome">Welcome, User</string>
+    <string name="txtWinRate">Current Win Rate: 50%</string>
 </resources>

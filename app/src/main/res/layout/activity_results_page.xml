@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_results_page"
     android:layout_width="match_parent"
@@ -8,6 +9,83 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.domain.some.rps.ResultsPage">
+    tools:context="com.domain.some.rps.ResultsPage"
+    android:background="@color/colorAccent">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/rock3"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="26dp"
+        android:id="@+id/imgUserChoice"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:contentDescription="@string/imgUserChoice" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/paper3"
+        android:id="@+id/imgCpuChoice"
+        android:layout_marginTop="47dp"
+        android:layout_below="@+id/imgUserChoice"
+        android:layout_alignStart="@+id/imgUserChoice"
+        android:contentDescription="@string/imgUserChoice" />
+
+    <TextView
+        android:text="@string/txtCPUChoice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtCPUChoice"
+        android:textStyle="normal|bold"
+        android:textSize="24sp"
+        android:layout_marginTop="35dp"
+        android:layout_alignTop="@+id/imgCpuChoice"
+        android:layout_alignStart="@+id/txtUserChoice" />
+
+    <TextView
+        android:text="@string/txtRuling"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtRuling"
+        android:textStyle="normal|bold"
+        android:textSize="18sp"
+        android:layout_marginTop="44dp"
+        android:layout_below="@+id/imgCpuChoice"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:text="@string/txtRulingOutcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtRulingOutcome"
+        android:textStyle="normal|bold"
+        android:textSize="36sp"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/txtRuling"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:text="@string/btnPlayAgain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="23dp"
+        android:id="@+id/btnPlayAgain"
+        android:textSize="36sp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:text="@string/txtUserChoice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtUserChoice"
+        android:textStyle="normal|bold"
+        android:textSize="24sp"
+        android:layout_marginTop="39dp"
+        android:textAlignment="viewStart"
+        android:layout_alignTop="@+id/imgUserChoice"
+        android:layout_alignEnd="@+id/txtRuling" />
 
 </RelativeLayout>
