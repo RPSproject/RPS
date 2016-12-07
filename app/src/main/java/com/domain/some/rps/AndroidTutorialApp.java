@@ -12,9 +12,10 @@ public class AndroidTutorialApp extends Application {
     //add this variable declaration:
     public static String userName = "";
     public static int theirChoice;
-    public static int wins;
-    public static int losses;
-    public static int draws;
+    public static double wins;
+    public static double losses;
+    public static double draws;
+    public static boolean isplaying;
 
     private static AndroidTutorialApp singleton;
 

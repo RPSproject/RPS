@@ -12,37 +12,57 @@
     tools:context="com.domain.some.rps.ResultsPage"
     android:background="@color/colorAccent">
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/rock3"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="26dp"
-        android:id="@+id/imgUserChoice"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true"
-        android:contentDescription="@string/imgUserChoice" />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="150dp">
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/paper3"
-        android:id="@+id/imgCpuChoice"
-        android:layout_marginTop="47dp"
-        android:layout_below="@+id/imgUserChoice"
-        android:layout_alignStart="@+id/imgUserChoice"
-        android:contentDescription="@string/imgUserChoice" />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/rock3"
+            android:id="@+id/imgUserChoice"
+            android:contentDescription="@string/imgUserChoice"
+            android:layout_weight="1" />
 
-    <TextView
-        android:text="@string/txtCPUChoice"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/txtCPUChoice"
-        android:textStyle="normal|bold"
-        android:textSize="24sp"
-        android:layout_marginTop="35dp"
-        android:layout_alignTop="@+id/imgCpuChoice"
-        android:layout_alignStart="@+id/txtUserChoice" />
+        <TextView
+            android:text="@string/txtUserChoice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtUserChoice"
+            android:textStyle="normal|bold"
+            android:textSize="24sp"
+            android:layout_marginTop="39dp"
+            android:textAlignment="viewStart"
+            android:layout_weight="1" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_marginTop="160dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/paper3"
+            android:id="@+id/imgCpuChoice"
+            android:contentDescription="@string/imgUserChoice"
+            android:layout_weight="1" />
+
+        <TextView
+            android:text="@string/txtCPUChoice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtCPUChoice"
+            android:textStyle="normal|bold"
+            android:textSize="24sp"
+            android:layout_marginTop="35dp"
+            android:layout_weight="1" />
+
+    </LinearLayout>
 
     <TextView
         android:text="@string/txtRuling"
@@ -51,8 +71,7 @@
         android:id="@+id/txtRuling"
         android:textStyle="normal|bold"
         android:textSize="18sp"
-        android:layout_marginTop="44dp"
-        android:layout_below="@+id/imgCpuChoice"
+        android:layout_marginTop="330dp"
         android:layout_centerHorizontal="true" />
 
     <TextView
@@ -75,17 +94,5 @@
         android:textSize="36sp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true" />
-
-    <TextView
-        android:text="@string/txtUserChoice"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/txtUserChoice"
-        android:textStyle="normal|bold"
-        android:textSize="24sp"
-        android:layout_marginTop="39dp"
-        android:textAlignment="viewStart"
-        android:layout_alignTop="@+id/imgUserChoice"
-        android:layout_alignEnd="@+id/txtRuling" />
 
 </RelativeLayout>

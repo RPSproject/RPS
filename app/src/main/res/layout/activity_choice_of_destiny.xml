@@ -12,12 +12,79 @@
     tools:context="com.domain.some.rps.ChoiceOfDestiny"
     android:background="@color/colorAccent">
 
+    <TextView
+        android:text="@string/txtDestiny"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtWelcome"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="11dp"
+        android:id="@+id/txtDestiny"
+        android:textStyle="normal|bold"
+        android:textSize="30sp" />
+
+    <TextView
+        android:text="@string/txtDirections"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="265dp"
+        android:id="@+id/txtDirections" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignTop="@+id/txtWinRate"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="40dp"
+        android:padding="10dp">
+
+        <TextView
+            android:text="Wins: 5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtWins"
+            android:layout_weight="1"
+            android:textColor="#344e00"
+            android:textStyle="normal|bold" />
+
+        <TextView
+            android:text="Losses: 2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtLosses"
+            android:layout_weight="1"
+            android:textColor="#cc2900"
+            android:textStyle="normal|bold"
+            android:textAlignment="center" />
+
+        <TextView
+            android:text="Draws: 1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtDraws"
+            android:layout_weight="1"
+            android:textStyle="normal|bold"
+            android:textAlignment="textEnd" />
+    </LinearLayout>
+
+    <TextView
+        android:text="@string/txtWinRate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="87dp"
+        android:id="@+id/txtWinRate"
+        android:textAlignment="center"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
 
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="100dp">
+        android:layout_marginTop="17dp"
+        android:layout_below="@+id/txtDestiny"
+        android:layout_centerHorizontal="true">
 
         <ImageButton
             android:layout_width="wrap_content"
@@ -50,39 +117,37 @@
         android:text="@string/txtWelcome"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
         android:id="@+id/txtWelcome"
         android:textSize="24sp"
-        android:textStyle="normal|italic" />
+        android:textStyle="normal|italic"
+        android:layout_marginTop="53dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnMusicPause"
+        android:background="@android:drawable/ic_media_play"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnMusic"
+        android:background="@android:drawable/ic_media_pause"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true" />
 
     <TextView
-        android:text="@string/txtDestiny"
+        android:text="@string/txtToggleMusic"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/txtWelcome"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="11dp"
-        android:id="@+id/txtDestiny"
-        android:textStyle="normal|bold"
-        android:textSize="30sp" />
-
-    <TextView
-        android:text="@string/txtDirections"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="230dp"
-        android:id="@+id/txtDirections" />
-
-    <TextView
-        android:text="@string/txtWinRate"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="25dp"
-        android:id="@+id/txtWinRate"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:textAlignment="center" />
+        android:id="@+id/txtToggleMusic"
+        android:layout_alignBaseline="@+id/btnMusicPause"
+        android:layout_alignBottom="@+id/btnMusicPause"
+        android:layout_toStartOf="@+id/btnMusicPause"
+        android:layout_marginTop="50dp" />
 
 </RelativeLayout>
