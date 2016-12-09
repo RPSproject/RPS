@@ -9,7 +9,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.domain.some.rps.ResultsPage"
+    tools:context="edu.umbc.rpslocaldyw.ResultsPage"
     android:background="@color/colorAccent">
 
     <LinearLayout
@@ -17,13 +17,23 @@
         android:layout_width="match_parent"
         android:layout_height="150dp">
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:srcCompat="@drawable/rock3"
-            android:id="@+id/imgUserChoice"
-            android:contentDescription="@string/imgUserChoice"
-            android:layout_weight="1" />
+        <FrameLayout
+            android:layout_width="131dp"
+            android:layout_height="match_parent">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imgUserChoice"
+                android:contentDescription="@string/imgUserChoice"
+                android:layout_weight="1" android:layout_gravity="center_horizontal"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imgTween1"
+                android:layout_weight="1"
+                android:src="@drawable/rock3"
+                android:layout_gravity="center_horizontal"/>
+        </FrameLayout>
 
         <TextView
             android:text="@string/txtUserChoice"
@@ -44,13 +54,21 @@
         android:layout_height="150dp"
         android:layout_marginTop="160dp">
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:srcCompat="@drawable/paper3"
-            android:id="@+id/imgCpuChoice"
-            android:contentDescription="@string/imgUserChoice"
-            android:layout_weight="1" />
+        <FrameLayout
+            android:layout_width="131dp"
+            android:layout_height="match_parent">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imgCpuChoice"
+                android:contentDescription="@string/imgUserChoice"
+                android:layout_weight="1" android:layout_gravity="center_horizontal"/>
+            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:id="@+id/imgTween2" android:contentDescription="@string/imgUserChoice"
+                android:layout_weight="1"
+                android:src="@drawable/rock3"
+                android:layout_gravity="center_horizontal"/>
+        </FrameLayout>
 
         <TextView
             android:text="@string/txtCPUChoice"

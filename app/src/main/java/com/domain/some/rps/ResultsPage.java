@@ -1,23 +1,31 @@
 package com.domain.some.rps;
 
-import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
-import android.widget.ImageView;
-import android.widget.TextView;
-import android.widget.Toast;
+        import android.content.Intent;
+        import android.graphics.drawable.AnimationDrawable;
+        import android.support.v7.app.AppCompatActivity;
+        import android.os.Bundle;
+        import android.view.View;
+        import android.view.animation.AnimationUtils;
+        import android.widget.Button;
+        import android.widget.ImageView;
+        import android.widget.TextView;
+        import android.widget.Toast;
 
-import java.util.Random;
+        import java.util.Random;
 
 public class ResultsPage extends AppCompatActivity {
-    ImageView userResult, cpuResult;
+    //ImageView userResultFrame, cpuResultFrame;
     TextView rulingtext, rulingoutcometext, userchoicetext;
     Button button1;
     int randomCPUResult;
     private String[] choices = {"", "Rock", "Paper", "Scissors"};
     int rock = 1; int paper = 2; int scissors = 3;
+
+    //AnimationDrawable boutAnimation;
+    //ImageView imgFrame = (ImageView) findViewById(R.id.imgBout);
+
+    AnimationDrawable userResultAnimation;
+    AnimationDrawable cpuResultAnimation;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,21 +58,35 @@ public class ResultsPage extends AppCompatActivity {
                 Toast.LENGTH_LONG).show(); //toast for debugging purposes
         */
 
-        userResult = (ImageView) findViewById(R.id.imgUserChoice);
-        cpuResult = (ImageView) findViewById(R.id.imgCpuChoice);
+        ImageView userResultFrame = (ImageView) findViewById(R.id.imgUserChoice);
+        ImageView cpuResultFrame = (ImageView) findViewById(R.id.imgCpuChoice);
+        ImageView imgRotate1 = (ImageView) findViewById(R.id.imgTween1);
+        imgRotate1.setVisibility(View.INVISIBLE);
+        ImageView imgRotate2 = (ImageView) findViewById(R.id.imgTween2);
+        imgRotate2.setVisibility(View.INVISIBLE);
 
+        //suprecede: set and run the appropriate animation for the user's choice vs. cpu's choice
         //set the appropriate image for the user's choice
         switch(AndroidTutorialApp.theirChoice) {
             case 1: // user chooses rock
-                userResult.setImageResource(R.drawable.rock3);
+                //userResultFrame.setBackgroundResource(R.drawable.rock_animation);
+                //userResultAnimation = (AnimationDrawable)userResultFrame.getBackground();
+                //userResultAnimation.start();
+                userResultFrame.setVisibility(View.INVISIBLE);
+                imgRotate1.setVisibility(View.VISIBLE);
+                imgRotate1.startAnimation(AnimationUtils.loadAnimation(this, R.anim.rock_rotation));
                 getOutcome(paper, scissors, rock);
                 break;
             case 2: // user chooses paper
-                userResult.setImageResource(R.drawable.paper3);
+                userResultFrame.setBackgroundResource(R.drawable.paper_animation);
+                userResultAnimation = (AnimationDrawable)userResultFrame.getBackground();
+                userResultAnimation.start();
                 getOutcome(scissors, rock, paper);
                 break;
             case 3: // user chooses scissors
-                userResult.setImageResource(R.drawable.scissors3);
+                userResultFrame.setBackgroundResource(R.drawable.scissors_animation);
+                userResultAnimation = (AnimationDrawable)userResultFrame.getBackground();
+                userResultAnimation.start();
                 getOutcome(rock, paper, scissors);
                 break;
             default: //toast catch error
@@ -74,19 +96,29 @@ public class ResultsPage extends AppCompatActivity {
         //set the appropriate image for the CPU's choice
         switch(randomCPUResult) {
             case 1: // user chooses rock
-                cpuResult.setImageResource(R.drawable.rock3);
+                //cpuResultFrame.setBackgroundResource(R.drawable.rock_animation);
+                //cpuResultAnimation = (AnimationDrawable)cpuResultFrame.getBackground();
+                //cpuResultAnimation.start();
+                cpuResultFrame.setVisibility(View.INVISIBLE);
+                imgRotate2.setVisibility(View.VISIBLE);
+                imgRotate2.startAnimation(AnimationUtils.loadAnimation(this, R.anim.rock_rotation));
                 break;
             case 2: // user chooses paper
-                cpuResult.setImageResource(R.drawable.paper3);
+                cpuResultFrame.setBackgroundResource(R.drawable.paper_animation);
+                cpuResultAnimation = (AnimationDrawable)cpuResultFrame.getBackground();
+                cpuResultAnimation.start();
                 break;
             case 3: // user chooses scissors
-                cpuResult.setImageResource(R.drawable.scissors3);
+                cpuResultFrame.setBackgroundResource(R.drawable.scissors_animation);
+                cpuResultAnimation = (AnimationDrawable)cpuResultFrame.getBackground();
+                cpuResultAnimation.start();
                 break;
             default: //toast catch error
                 break;
         }
 
     }
+
 
 
     /**
@@ -146,3 +178,4 @@ public class ResultsPage extends AppCompatActivity {
         return randomNum;
     }
 }
+
